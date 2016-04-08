@@ -1,23 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ivolianer.starve.MainActivity">
+    android:orientation="vertical">
 
-    <ivolianer.starve.MyTextView
-        android:id="@+id/textview"
-        android:layout_width="400px"
-        android:layout_height="100px"
-        android:background="@android:color/holo_blue_light"
-        android:singleLine="true"
-        android:lines="1"
-        android:ellipsize="none"
-        android:text="Hello World! Hello World! Hello World! Hello World!"
-        android:textColor="@android:color/white" />
+    <!-- 头部 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:background="@color/colorPrimary">
 
-</RelativeLayout>
+        <!-- 走马灯 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_marginRight="15px"
+                app:iiv_color="@android:color/white"
+                app:iiv_icon="ion-ios-location-outline" />
+
+            <ivolianer.starve.widget.MarqueeView
+                android:id="@+id/marquee"
+                android:layout_width="600px"
+                android:layout_height="70px"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="徐汇漕宝路66号 光大会展中心 C座 2405"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/search_view"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_gravity="end">
+
+        </View>
+
+    </FrameLayout>
+
+    <ivolianer.starve.widget.MyScrollerView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3000px"
+                />
+
+
+        </LinearLayout>
+
+    </ivolianer.starve.widget.MyScrollerView>
+
+</LinearLayout>
