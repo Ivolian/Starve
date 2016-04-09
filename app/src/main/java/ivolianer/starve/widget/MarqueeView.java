@@ -36,7 +36,4 @@ public class MarqueeView extends TextView {
         return true;
     }
 
-    //
-
-
 }

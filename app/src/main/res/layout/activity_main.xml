@@ -1,61 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <FrameLayout
+    <!-- 走马灯部分 10 -->
+    <com.zhy.android.percent.support.PercentFrameLayout
         android:layout_width="match_parent"
-        android:layout_height="180px"
-        android:background="@color/colorPrimary">
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_heightPercent="10%sh">
 
-        <!-- 走马灯 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="180px"
-            android:gravity="center"
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
-    <ImageView android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/location_title_icon"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/location_title_icon"
+                app:layout_marginRightPercent="2%sw" />
 
             <ivolianer.starve.widget.MarqueeView
                 android:id="@+id/marquee"
-                android:layout_width="600px"
-                android:layout_height="70px"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:ellipsize="marquee"
                 android:gravity="center"
                 android:marqueeRepeatLimit="marquee_forever"
                 android:singleLine="true"
-                android:text="徐汇漕宝路66号 光大会展中心 C座 2405"
                 android:textColor="@android:color/white"
-                android:textSize="18dp" />
+                app:layout_textSizePercent="3.2%sh"
+                app:layout_widthPercent="60%sw" />
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/abc_spinner_mtrl_am_alpha"
+                app:layout_marginLeftPercent="2%sw" />
 
-        </LinearLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
 
-        <ivolianer.starve.widget.ElasticSearchIconView
+        <ivolianer.starve.widget.ZoomImageView
             android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="end"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@mipmap/search_icon"
+            app:layout_heightPercent="10%sh"
+            app:layout_widthPercent="9%sh" />
 
-            android:layout_width="180px"
-            android:layout_height="200px"
-            android:layout_gravity="end|center_vertical">
-
-        </ivolianer.starve.widget.ElasticSearchIconView>
-
-    </FrameLayout>
-
-
-
-
-
-
-
-
-
-
-
-
+    </com.zhy.android.percent.support.PercentFrameLayout>
 
 
     <ivolianer.starve.widget.MyScrollerView
@@ -78,28 +79,30 @@
                     android:layout_height="120px"
                     android:layout_marginBottom="30px"
                     android:layout_marginLeft="40px"
-                    android:layout_marginRight="40px" >
+                    android:layout_marginRight="40px">
 
 
-                    <LinearLayout android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:orientation="horizontal">
 
-                    <ImageView android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/application_search_icon"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/application_search_icon" />
 
-                    <TextView android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="请输入商家或商品名称"
-                        android:textSize="40px"
-                        />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="请输入商家或商品名称"
+                            android:textSize="40px" />
 
                     </LinearLayout>
 
 
-                    </ivolianer.starve.widget.RoundCornerFrameLayout>
+                </ivolianer.starve.widget.RoundCornerFrameLayout>
 
             </FrameLayout>
 
@@ -113,4 +116,4 @@
 
     </ivolianer.starve.widget.MyScrollerView>
 
-</LinearLayout>
+</com.zhy.android.percent.support.PercentLinearLayout>
