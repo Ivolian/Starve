@@ -50,6 +50,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:scaleType="center"
             android:src="@mipmap/search_icon"
@@ -58,62 +59,58 @@
 
     </com.zhy.android.percent.support.PercentFrameLayout>
 
-
-    <ivolianer.starve.widget.MyScrollerView
-        android:id="@+id/scrollView"
+    <com.zhy.android.percent.support.PercentFrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content" />
 
-            <FrameLayout
+        <com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            app:layout_heightPercent="8%sh"
+            app:layout_paddingBottomPercent="1.5%sh"
+            app:layout_paddingLeftPercent="4%sw"
+            app:layout_paddingRightPercent="4%sw">
+
+            <ivolianer.starve.widget.RoundCornerFrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary">
+                android:layout_height="match_parent">
 
-                <ivolianer.starve.widget.RoundCornerFrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="120px"
-                    android:layout_marginBottom="30px"
-                    android:layout_marginLeft="40px"
-                    android:layout_marginRight="40px">
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
 
-
-                    <LinearLayout
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:orientation="horizontal">
+                        android:src="@mipmap/application_search_icon" />
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@mipmap/application_search_icon" />
+                    <TextView
+                        app:layout_marginLeftPercent="2%sw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请输入商家或商品名称"
+                        android:textColor="@color/md_grey_400"
+                        app:layout_textSizePercent="2.7%sh" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="请输入商家或商品名称"
-                            android:textSize="40px" />
+                </com.zhy.android.percent.support.PercentLinearLayout>
 
-                    </LinearLayout>
+            </ivolianer.starve.widget.RoundCornerFrameLayout>
 
+        </com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>
 
-                </ivolianer.starve.widget.RoundCornerFrameLayout>
-
-            </FrameLayout>
-
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3000px" />
-
-
-        </LinearLayout>
-
-    </ivolianer.starve.widget.MyScrollerView>
+    </com.zhy.android.percent.support.PercentFrameLayout>
 
 </com.zhy.android.percent.support.PercentLinearLayout>
+
+
+

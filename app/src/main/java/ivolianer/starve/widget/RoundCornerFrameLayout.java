@@ -4,10 +4,11 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
-import android.widget.FrameLayout;
+
+import com.zhy.android.percent.support.PercentFrameLayout;
 
 
-public class RoundCornerFrameLayout extends FrameLayout {
+public class RoundCornerFrameLayout extends PercentFrameLayout {
 
     public RoundCornerFrameLayout(Context context) {
         super(context);
