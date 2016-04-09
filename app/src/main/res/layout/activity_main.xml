@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- 头部 -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="200px"
+        android:layout_height="180px"
         android:background="@color/colorPrimary">
 
         <!-- 走马灯 -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="180px"
             android:gravity="center"
             android:orientation="horizontal">
-
-            <com.mikepenz.iconics.view.IconicsImageView
-                android:layout_width="60px"
-                android:layout_height="60px"
-                android:layout_marginRight="15px"
-                app:iiv_color="@android:color/white"
-                app:iiv_icon="ion-ios-location-outline" />
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/location_title_icon"/>
 
             <ivolianer.starve.widget.MarqueeView
                 android:id="@+id/marquee"
@@ -37,17 +31,32 @@
                 android:textColor="@android:color/white"
                 android:textSize="18dp" />
 
+
         </LinearLayout>
 
-        <View
+        <ivolianer.starve.widget.ElasticSearchIconView
             android:id="@+id/search_view"
-            android:layout_width="200px"
-            android:layout_height="200px"
-            android:layout_gravity="end">
 
-        </View>
+            android:layout_width="180px"
+            android:layout_height="200px"
+            android:layout_gravity="end|center_vertical">
+
+        </ivolianer.starve.widget.ElasticSearchIconView>
 
     </FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <ivolianer.starve.widget.MyScrollerView
         android:id="@+id/scrollView"
@@ -59,10 +68,45 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <ivolianer.starve.widget.RoundCornerFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120px"
+                    android:layout_marginBottom="30px"
+                    android:layout_marginLeft="40px"
+                    android:layout_marginRight="40px" >
+
+
+                    <LinearLayout android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                    <ImageView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/application_search_icon"/>
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请输入商家或商品名称"
+                        android:textSize="40px"
+                        />
+
+                    </LinearLayout>
+
+
+                    </ivolianer.starve.widget.RoundCornerFrameLayout>
+
+            </FrameLayout>
+
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="3000px"
-                />
+                android:layout_height="3000px" />
 
 
         </LinearLayout>
