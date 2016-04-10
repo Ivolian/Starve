@@ -5,24 +5,18 @@ import android.util.AttributeSet;
 import android.widget.ScrollView;
 
 
-public class MyScrollerView extends ScrollView {
+public class CustomScrollerView extends ScrollView {
 
-    public MyScrollerView(Context context) {
+    public CustomScrollerView(Context context) {
         super(context);
     }
 
-    public MyScrollerView(Context context, AttributeSet attrs) {
+    public CustomScrollerView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public MyScrollerView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CustomScrollerView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-    }
-
-    //
-
-    public interface OnScrollListener {
-        void onScroll(int scrollY, int direction);
     }
 
     //
@@ -39,6 +33,12 @@ public class MyScrollerView extends ScrollView {
         if (onScrollListener != null) {
             onScrollListener.onScroll(t, t - oldt);
         }
+    }
+
+    //
+
+    public interface OnScrollListener {
+        void onScroll(int scrollY, int direction);
     }
 
 }

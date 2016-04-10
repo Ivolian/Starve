@@ -32,7 +32,7 @@ public class ZoomImageView extends ImageView {
     }
 
     public void show() {
-        PropertyValuesHolder propertyValuesHolderS = PropertyValuesHolder.ofFloat(SCALE, 0, 1.2f, 0.8f, 1);
+        PropertyValuesHolder propertyValuesHolderS = PropertyValuesHolder.ofFloat(SCALE, 0, 1.3f, 0.8f, 1);
         PropertyValuesHolder propertyValuesHolderA = PropertyValuesHolder.ofInt(ALPHA, 0, 255);
         ValueAnimator animator = ValueAnimator.ofPropertyValuesHolder(propertyValuesHolderS, propertyValuesHolderA);
         animator.setDuration(1000);
