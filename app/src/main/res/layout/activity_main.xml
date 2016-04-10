@@ -112,10 +112,85 @@
 
             </com.zhy.android.percent.support.PercentFrameLayout>
 
-            <View
+            <!-- Pull -->
+            <com.zhy.android.percent.support.PercentFrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="3000px"
-                android:background="@color/md_white" />
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300px"
+                    android:background="@color/md_grey_200"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/good1"
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/good_1" />
+
+                    <ImageView
+                        android:id="@+id/good2"
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/good_2" />
+
+                    <ImageView
+                        android:id="@+id/good3"
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/good_3" />
+
+                    <ImageView
+                        android:id="@+id/good4"
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/good_4" />
+
+                    <ImageView
+                        android:id="@+id/good5"
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/good_5" />
+
+                    <ImageView
+                        android:id="@+id/good6"
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/good_6" />
+
+                    <ImageView
+                        android:id="@+id/box"
+                        android:layout_width="110px"
+                        android:layout_height="110px"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/boxes" />
+
+
+                </FrameLayout>
+
+                <ivolianer.starve.widget.PullLayout
+                    android:id="@+id/child"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+android:background="@color/md_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="3000px"
+                        />
+
+                </ivolianer.starve.widget.PullLayout>
+
+            </com.zhy.android.percent.support.PercentFrameLayout>
 
         </com.zhy.android.percent.support.PercentLinearLayout>
 
