@@ -1,4 +1,4 @@
-package ivolianer.starve.widget;
+package ivolianer.starve.widget.view;
 
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;

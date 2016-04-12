@@ -25,7 +25,7 @@
                 android:src="@mipmap/location_title_icon"
                 app:layout_marginRightPercent="2%sw" />
 
-            <ivolianer.starve.widget.MarqueeView
+            <ivolianer.starve.widget.view.MarqueeView
                 android:id="@+id/marquee"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -45,7 +45,7 @@
 
         </com.zhy.android.percent.support.PercentLinearLayout>
 
-        <ivolianer.starve.widget.ZoomImageView
+        <ivolianer.starve.widget.view.ZoomImageView
             android:id="@+id/searchIcon"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -61,11 +61,11 @@
 
     </com.zhy.android.percent.support.PercentFrameLayout>
 
-    <ivolianer.starve.widget.CustomScrollerView
+    <ivolianer.starve.widget.viewgroup.CustomScrollerView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:overScrollMode="never">
+        >
 
         <com.zhy.android.percent.support.PercentLinearLayout
             android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                 app:layout_paddingLeftPercent="4%sw"
                 app:layout_paddingRightPercent="4%sw">
 
-                <ivolianer.starve.widget.RoundCornerFrameLayout
+                <ivolianer.starve.widget.viewgroup.RoundCornerFrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -108,93 +108,40 @@
 
                     </com.zhy.android.percent.support.PercentLinearLayout>
 
-                </ivolianer.starve.widget.RoundCornerFrameLayout>
+                </ivolianer.starve.widget.viewgroup.RoundCornerFrameLayout>
 
             </com.zhy.android.percent.support.PercentFrameLayout>
 
-            <!-- Pull -->
-            <com.zhy.android.percent.support.PercentFrameLayout
+            <ivolianer.starve.widget.viewgroup.PullLayout
+                android:id="@+id/pullLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="3000px"
+                >
 
-                <FrameLayout
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="300px"
-                    android:background="@color/md_grey_200"
+                    android:layout_height="400px"
+                    android:background="@android:color/holo_green_light"
+                    android:gravity="center"
+                    android:text="BackView"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp" />
 
-                    >
-
-                    <ImageView
-                        android:id="@+id/good1"
-                        android:layout_width="90px"
-                        android:layout_height="90px"
-                        android:layout_gravity="center"
-                        android:src="@mipmap/good_1" />
-
-                    <ImageView
-                        android:id="@+id/good2"
-                        android:layout_width="90px"
-                        android:layout_height="90px"
-                        android:layout_gravity="center"
-                        android:src="@mipmap/good_2" />
-
-                    <ImageView
-                        android:id="@+id/good3"
-                        android:layout_width="90px"
-                        android:layout_height="90px"
-                        android:layout_gravity="center"
-                        android:src="@mipmap/good_3" />
-
-                    <ImageView
-                        android:id="@+id/good4"
-                        android:layout_width="90px"
-                        android:layout_height="90px"
-                        android:layout_gravity="center"
-                        android:src="@mipmap/good_4" />
-
-                    <ImageView
-                        android:id="@+id/good5"
-                        android:layout_width="90px"
-                        android:layout_height="90px"
-                        android:layout_gravity="center"
-                        android:src="@mipmap/good_5" />
-
-                    <ImageView
-                        android:id="@+id/good6"
-                        android:layout_width="90px"
-                        android:layout_height="90px"
-                        android:layout_gravity="center"
-                        android:src="@mipmap/good_6" />
-
-                    <ImageView
-                        android:id="@+id/box"
-                        android:layout_width="110px"
-                        android:layout_height="110px"
-                        android:layout_gravity="center"
-                        android:src="@mipmap/boxes" />
-
-
-                </FrameLayout>
-
-                <ivolianer.starve.widget.PullLayout
-                    android:id="@+id/child"
+                <TextView
+                    android:id="@+id/front"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_height="2000px"
+                    android:background="@color/md_white"
+                    android:gravity="center"
+                    android:text="FrontView"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20dp" />
 
-                    <View
-android:background="@color/md_white"
-                        android:layout_width="match_parent"
-                        android:layout_height="3000px"
-                        />
-
-                </ivolianer.starve.widget.PullLayout>
-
-            </com.zhy.android.percent.support.PercentFrameLayout>
+            </ivolianer.starve.widget.viewgroup.PullLayout>
 
         </com.zhy.android.percent.support.PercentLinearLayout>
 
-    </ivolianer.starve.widget.CustomScrollerView>
+    </ivolianer.starve.widget.viewgroup.CustomScrollerView>
 
 </com.zhy.android.percent.support.PercentLinearLayout>
 

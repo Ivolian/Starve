@@ -1,4 +1,4 @@
-package ivolianer.starve.widget;
+package ivolianer.starve.widget.viewgroup;
 
 import android.content.Context;
 import android.graphics.Color;

@@ -7,10 +7,10 @@ import com.zhy.android.percent.support.PercentFrameLayout;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import ivolianer.starve.widget.CustomScrollerView;
-import ivolianer.starve.widget.MarqueeView;
-import ivolianer.starve.widget.PullLayout;
-import ivolianer.starve.widget.ZoomImageView;
+import ivolianer.starve.widget.viewgroup.CustomScrollerView;
+import ivolianer.starve.widget.view.MarqueeView;
+import ivolianer.starve.widget.viewgroup.PullLayout;
+import ivolianer.starve.widget.view.ZoomImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,21 +36,24 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.scrollView)
     CustomScrollerView scrollView;
 
-@Bind(R.id.child)
-PullLayout pullLayout;
+    @Bind(R.id.pullLayout)
+    PullLayout pullLayout;
+
 
 
 
     private void initScrollerView() {
-       scrollView.child = pullLayout;
-        pullLayout.box = findViewById(R.id.box);
-        pullLayout.good1 = findViewById(R.id.good1);
-        pullLayout.good2 = findViewById(R.id.good2);
-        pullLayout.good3 = findViewById(R.id.good3);
-        pullLayout.good4 = findViewById(R.id.good4);
-        pullLayout.good5 = findViewById(R.id.good5);
-        pullLayout.good6 = findViewById(R.id.good6);
 
+//        pullLayout.box = findViewById(R.id.box);
+//        pullLayout.good1 = findViewById(R.id.good1);
+//        pullLayout.good2 = findViewById(R.id.good2);
+//        pullLayout.good3 = findViewById(R.id.good3);
+//        pullLayout.good4 = findViewById(R.id.good4);
+//        pullLayout.good5 = findViewById(R.id.good5);
+//        pullLayout.good6 = findViewById(R.id.good6);
+
+        scrollView.pullLayout = pullLayout;
+        pullLayout.scrollView = scrollView;
         scrollView.setOnScrollListener(new CustomScrollerView.OnScrollListener() {
             @Override
             public void onScroll(int scrollY, int direction) {

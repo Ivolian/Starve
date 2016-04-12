@@ -1,4 +1,4 @@
-package ivolianer.starve.widget;
+package ivolianer.starve.widget.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
